@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AutomationExerciseSuite" verbose="1" parallel="tests" thread-count="1">
+
+    <test name="SuccessfulRegisteration">
+        <classes>
+            <class name="SuccessfulRegisteration"/>
+        </classes>
+    </test>
+
+    <test name="ExistingSignup">
+        <classes>
+            <class name="ExistingSignup"/>
+        </classes>
+    </test>
+
+    <test name="SuccessfulLogin">
+        <classes>
+            <class name="SuccessfulLogin"/>
+        </classes>
+    </test>
+
+    <test name="IncorrectUserLogin">
+        <classes>
+            <class name="IncorrectUserLogin"/>
+        </classes>
+    </test>
+
+    <test name="VerifyAllProducts">
+        <classes>
+            <class name="VerifyAllProducts"/>
+        </classes>
+    </test>
+
+    <test name="SearchProduct">
+        <classes>
+            <class name="SearchProduct"/>
+        </classes>
+    </test>
+
+    <test name="SearchProductNotExist">
+        <classes>
+            <class name="SearchProductNotExist"/>
+        </classes>
+    </test>
+
+    <test name="VerifyProductquantityInCart">
+        <classes>
+            <class name="VerifyProductquantityInCart"/>
+        </classes>
+    </test>
+
+    <test name="PlaceOrderTest">
+        <classes>
+            <class name="PlaceOrderTest"/>
+        </classes>
+    </test>
+
+    <test name="RemoveProductsFromCart">
+        <classes>
+            <class name="RemoveProductsFromCart"/>
+        </classes>
+    </test>
+
+    <test name="ContactUsForm">
+        <classes>
+            <class name="ContactUsForm"/>
+        </classes>
+    </test>
+
+    <test name="AddReviewTest">
+        <classes>
+            <class name="AddReviewTest"/>
+        </classes>
+    </test>
+
+</suite>
