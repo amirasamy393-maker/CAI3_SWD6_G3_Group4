@@ -1,0 +1,282 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Due date,Votes,Description,Environment,Watchers,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Inward issue link (Blocks),Inward issue link (Blocks),Outward issue link (Blocks),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Inward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Outward issue link (Relates),Attachment,Custom field (Actual Result),Custom field (Actual Result),Custom field (Actual end),Custom field (Actual start),Custom field (Approvals),Custom field (Begin Date),Custom field (Change reason),Custom field (Change risk),Custom field (Change type),Custom field (Development),Custom field (End Date),Custom field (Epic Color),Custom field (Epic Name),Custom field (Epic Status),Custom field (Expected Result),Custom field (Expected Result),Custom field (Focus Areas),Custom field (Goals),Custom field (Impact),Custom field (Issue color),Custom field (Locked forms),Custom field (Open forms),Custom field (Pre-condition),Custom field (Pre-condition),Custom field (Project overview key),Custom field (Project overview status),Custom field (Rank),Custom field (Request Type),Custom field (Revision),Custom field (Sentiment),Sprint,Custom field (Start date),Custom field (Story Points),Custom field (Story point estimate),Custom field (Submitted forms),Custom field (Target end),Custom field (Target start),Custom field (Team),Custom field (Test Case Title),Custom field (Test Case Title),Custom field (Test Data),Custom field (Test Data),Custom field (Test Data),Custom field (Test Data),Custom field (Total forms),Custom field (Vulnerability),Custom field (Vulnerability),Custom field ([CHART] Date of First Response),Custom field ([CHART] Time in Status),Parent,Parent key,Parent summary,Status Category,Status Category Changed
+Checkout Process,GD-121,10291,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,11/22/2025 22:48,11/22/2025 22:48,,,,0,"As a visitor or registered user  
+I want to complete my purchase using the checkout page  
+So that I can receive the products I added to my cart
+
+Acceptance Criteria:
+
+# Given the user is logged in with items in the cart, when they click “Proceed to Checkout,” then they should be able to enter shipping and payment details.  
+# Given valid shipping and payment information, when the user places the order, then the system should confirm the order and show the order details.  
+# Given the user enters invalid payment information, when they attempt to place the order, then the system should reject the payment and display a clear error message.  
+# User can edit payment information and retry without losing cart items.
+# Given the user has no items in the cart, when they click “Proceed to Checkout,” then the system should display a message like “Your cart is empty” and prevent checkout. 
+# The discount should be reflected in the final order summary before placing the order.
+# The system should calculate shipping costs per address accurately.  
+# The system should validate each payment method before processing.  
+# The order should only be confirmed if all payment methods are successfully processed.
+# Given multiple items in the cart, when the user selects different shipping methods or payment methods for each item, then the system should reflect the choices in the final order summary.  
+# Any invalid combinations should prompt an error message before placing the order.",,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,,,,,,,,,,,GD-70,GD-83,GD-87,GD-89,GD-37,,,,,,,,,,,,,,,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@41abe036,,,,,,,,,,,,,,,,,,,,,,0|i000rj:,,,,,,,,,,,,,,,,,,,,,,,10036,GD-3,Manual Testing - QA Cart,To Do,11/22/2025 22:48
+Wish List,GD-120,10289,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,11/22/2025 21:30,11/22/2025 21:30,,,,0,"As a customer
+I want to add products to my wishlist
+So that I can save items and view them later without adding them to the cart
+
+Acceptance Criteria:
+
+# Adding items to wishlist
+Given the user is on a product page,
+When they click ""Add to Wishlist"",
+Then the product should be added to the wishlist successfully
+And a success message should appear.
+# Removing items from wishlist
+Given the wishlist page is open,
+When the user clicks ""Remove"" on a saved product,
+Then the item should be removed successfully
+And the wishlist should update.
+# Viewing wishlist
+Given the user is logged in,
+When they open the ""Wish List"" page,
+Then all previously saved products should be displayed with name, price, and availability.
+# Wishlist without login
+Given the user is not logged in,
+When clicking ""Add to Wishlist"",
+Then the system should redirect them to the login page
+Or show a message requiring login.
+# Moving wishlist item to cart
+Given the wishlist page is open,
+When the user clicks ""Add to Cart"" on a wishlist product,
+Then the product should be added to the cart successfully
+And remain in the wishlist unless removed manually.
+
+Database Validation:
+
+* Wishlist items should be stored in oc_customer_wishlist
+* Product availability should match data in oc_product
+* Adding and removing must update the database in real time
+
+Notifications:
+
+* Success message when adding an item to wishlist
+* Success message when removing an item from wishlist
+* Success message when moving an item from wishlist to cart
+* Error/warning message when user is not logged in",,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,,,,,,,,,,,GD-41,GD-102,GD-101,GD-38,GD-39,,,,,,,,,,,,,,,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@6d924651,,,,,,,,,,,,,,,,,,,,,,0|i000rb:,,,,,,,,,,,,,,,,,,,,,,,10036,GD-3,Manual Testing - QA Cart,To Do,11/22/2025 21:30
+Cart Management Functionality,GD-119,10287,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,11/22/2025 21:19,11/22/2025 21:19,,,,0,"As a customer
+I want to manage items in my shopping cart
+So that I can add, update, and remove products before checkout
+
+Acceptance Criteria:
+
+# Adding items to cart
+Given the user is on a product page, when they click ""Add to Cart"",
+Then the product should be added to the cart successfully
+And the cart total should update correctly.
+# Updating cart quantity
+Given the cart page is open, when the user increases or decreases product quantity,
+Then the total price should update correctly in real time.
+# Removing items from cart
+Given the cart contains at least one item, when the user clicks ""Remove"",
+Then the item should be removed from the cart
+And totals should update.
+# Applying coupon codes
+Given the user enters a coupon code, when the code is valid,
+Then the discount should be applied and reflected in totals.
+Given the coupon code is invalid or expired, when submitted,
+Then an appropriate error message should appear.
+# Applying gift certificates
+Given the user enters a valid gift certificate code,
+When submitted, then the discount should be applied successfully.
+Given the gift certificate is invalid or expired,
+When submitted, then an error message should be displayed.
+# Estimate shipping
+Given the user enters valid Country, Region/State, and Post Code,
+When clicking ""Estimate Shipping"",
+Then available shipping methods and costs should be displayed.
+Given the user enters an invalid Post Code,
+When submitting it,
+Then an appropriate error message should be displayed.
+# Exceeding product stock quantity
+Given a product has limited stock,
+When the user enters a quantity exceeding available stock and clicks ""Add to Cart"",
+Then the system should display:
+""Products marked with *** are not available in the desired quantity or not in stock!""
+And the cart count should not change.
+
+Database Validation:
+
+* Cart items should be stored in oc_cart
+* Coupon validation must check oc_coupon
+* Gift certificate validation must check oc_voucher
+* Shipping estimation must validate geo zones
+* Totals must calculate accurate aggregation
+
+Notifications:
+
+* Success message when adding items to cart
+* Success message for valid coupon or gift certificate
+* Error message for invalid/expired coupon
+* Error message for invalid/expired gift certificate
+* Error message when exceeding stock quantity",,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,,,,,,,,,,,GD-30,GD-32,GD-22,GD-33,GD-78,GD-24,GD-25,GD-36,GD-26,GD-27,GD-28,GD-29,GD-103,,,,,,,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@7b7d1ef6,,,,,,,,,,,,,,,,,,,,,,0|i000r3:,,,,,,,,,,,,,,,,,,,,,,,10036,GD-3,Manual Testing - QA Cart,To Do,11/22/2025 21:19
+Product Browsing,GD-118,10285,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,11/22/2025 20:45,11/22/2025 20:45,,,,0,"As a customer
+I want to browse products by category, keyword, and sorting
+So that I can find items easily
+
+Acceptance Criteria:
+
+# Given the homepage is open
+When the user selects a category
+Then relevant products should be displayed
+# Given the search bar is used
+When the user enters valid keywords
+Then matching products should appear
+# Given the user applies sorting
+When sorting by price or name
+Then products should reorder correctly
+# Database should reflect correct product-category linking:
+#* oc_product
+#* oc_product_description
+#* oc_category",,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,,,,,,,,,,,GD-19,GD-76,GD-57,GD-14,GD-15,GD-17,,,,,,,,,,,,,,,,,22/Nov/25 8:37 PM;809cf302-23f0-40b0-bae0-fd31200f76d8;Product browsing (3).xlsx;https://hmahmoudhm53.atlassian.net/rest/api/3/attachment/content/10142,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@248cf710,,,,,,,,,,,,,,,,,,,,,,0|i000qv:,,,,,,,,,,,,,,,,,,,,,,,10036,GD-3,Manual Testing - QA Cart,To Do,11/22/2025 20:45
+customer Login,GD-113,10277,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,11/22/2025 14:04,11/22/2025 15:27,11/22/2025 15:27,,,0,"*As a* registered user,
+*I want to* log in using my username and password or reset my password if I forget it,
+*So that* I can securely access my account and recover it when needed.
+
+*Acceptance Criteria:*
+
+# User can log in successfully with a valid username and valid password.
+# User sees an appropriate error message when using invalid username and/or password.
+# User can use the ""Forgot Password"" feature to request a password reset via registered email.
+# System sends a password reset link to the registered email.
+# User can set a new password and log in successfully.
+# Appropriate error messages are displayed if the email is not registered or invalid.",,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,,,,,,,,,GD-97,GD-88,GD-81,,,,,,,,,,,,,,GD-114,GD-115,GD-116,GD-117,,,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@7fefba0b,,,,,,,,,,,,,,,,,,,,,,0|i00024:,,,,GD Sprint 1,,,,,,,,,,,,,,,,,,,10036,GD-3,Manual Testing - QA Cart,To Do,11/22/2025 14:04
+customer registration,GD-79,10189,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,11/15/2025 13:10,11/22/2025 15:26,11/22/2025 16:38,,,0,"*As a* visitor
+*I want to* register a new account using the registration page
+*So that* I can make purchases and access my account
+
+*Acceptance Criteria:*
+
+# Given the registration page is open, when the user fills in all required fields:
+#* Username
+#* First Name
+#* Last Name
+#* E-Mail
+#* Country
+#* Password
+And completes the *CAPTCHA*,
+Then the account should be created successfully.
+# Given any required field is left blank or contains invalid data, when the user submits,
+Then an appropriate error message should be displayed.
+# After successful registration, the new customer should have a record in the database with *status = 0 (Pending)*.
+# The new customer should appear in the Admin panel under Customers.
+# The system should send a confirmation email to the registered E-Mail address.
+# The newly registered user should be able to *log in using the created account* and access all allowed functionalities on the website (browse catalog, add to cart, checkout, view orders).",,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,,,,,,,,,,,,,,,,,,,,,,,,,GD-82,GD-84,GD-86,GD-93,GD-95,GD-100,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@6176d6,,,,,,,,,,,,,,,,,,,,,,0|i00023:,,,,GD Sprint 1,,,,,,,,,,,,,,,,,,,10036,GD-3,Manual Testing - QA Cart,To Do,11/15/2025 13:10
+Customer Account Lifecycle Management,GD-56,10160,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,AMIRA SAMY,712020:409ff243-7e32-44f9-8254-3a1e9c227a0d,AMIRA SAMY,712020:409ff243-7e32-44f9-8254-3a1e9c227a0d,11/15/2025 11:08,11/22/2025 14:19,11/22/2025 12:49,,,0,"As a customer service administrator, I want to manage the complete customer lifecycle from registration to account maintenance so that I can ensure proper customer onboarding and account security.
+
+*Acceptance Criteria*
+
+* New customers can successfully register accounts with required personal information
+* Customer address information can be added and managed for shipping and billing purposes
+* New customer registrations can be reviewed and approved through admin approval workflow
+* Problematic customer accounts can be suspended to maintain system security
+* Approved customers can successfully login and access their accounts
+* Suspended customers are immediately blocked from system access",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@13f840f1,,,,,,,,,,,,,,,,,,,,,,0|i0002z:,,,,GD Sprint 1,,,,,,,,,,,,,,,,,,,10036,GD-3,Manual Testing - QA Cart,To Do,11/15/2025 11:08
+Sales Manager – Orders & Campaigns Control,GD-54,10157,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,AMIRA SAMY,712020:409ff243-7e32-44f9-8254-3a1e9c227a0d,AMIRA SAMY,712020:409ff243-7e32-44f9-8254-3a1e9c227a0d,11/15/2025 11:07,11/22/2025 14:45,11/22/2025 14:06,,,0,"As a sales and marketing manager, I want to efficiently process orders and manage promotional campaigns so that I can provide excellent customer service and drive sales through effective discounts.
+
+*Acceptance Criteria*
+
+* Orders can be filtered and viewed based on status and date ranges for efficient management
+* Order status can be updated with customer notifications and internal comments
+* Percentage-based discount coupons can be created with minimum purchase requirements
+* Coupons can be successfully applied during checkout with accurate discount calculations
+* Order status changes trigger proper customer notifications via email
+* Coupon usage is tracked and recorded in order history and reports",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@16cf5699,,,,,,,,,,,,,,,,,,,,,,0|i000d3:,,,,GD Sprint 1,,,,,,,,,,,,,,,,,,,,,,To Do,11/15/2025 11:07
+Storefront Design & Layout Management,GD-53,10156,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,AMIRA SAMY,712020:409ff243-7e32-44f9-8254-3a1e9c227a0d,AMIRA SAMY,712020:409ff243-7e32-44f9-8254-3a1e9c227a0d,11/15/2025 11:06,11/22/2025 12:38,11/22/2025 16:40,,,0,"As a store designer, I want to manage all visual elements and layout structure so that I can create an engaging and well-organized shopping experience for customers.
+
+*Acceptance Criteria*
+
+* Homepage slider banners can be created with multiple slides, images, and links
+* Homepage layout structure can be modified by adding/removing HTML content modules
+* Product image display settings including dimensions can be adjusted site-wide
+* Obsolete promotional banners can be permanently deleted from the system
+* Layout changes are immediately visible on the frontend after saving
+* Image dimension changes apply consistently across all product pages",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@3dac5051,,,,,,,,,,,,,,,,,,,,,,0|i000cv:,,,,GD Sprint 1,,,,,,,,,,,,,,,,,,,,,,To Do,11/15/2025 11:06
+Admin Management of Payment & Shipping Extensions,GD-52,10155,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,AMIRA SAMY,712020:409ff243-7e32-44f9-8254-3a1e9c227a0d,AMIRA SAMY,712020:409ff243-7e32-44f9-8254-3a1e9c227a0d,11/15/2025 11:05,11/22/2025 12:36,11/22/2025 12:35,,,0,"As a store administrator, I want to manage all payment and shipping extensions from a centralized interface so that I can control available payment methods and shipping options for customers.
+
+*Acceptance Criteria*
+
+* PayPal Standard payment method can be enabled and configured with email and transaction settings
+* Cash On Delivery payment method can be disabled when not available
+* Flat Rate shipping costs can be configured with specific amounts and geographic zones
+* Unused extensions like Google Analytics can be completely uninstalled from the system
+* All extension status changes are immediately reflected in both admin panel and store frontend
+* Extension configurations are saved properly without system errors",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@7d320da3,,,,,,,,,,,,,,,,,,,,,,0|i000cn:,,,,GD Sprint 1,,,,,,,,,,,,,,,,,,,,,,To Do,11/15/2025 11:05
+Account Information Management,GD-51,10154,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,Youssef Khaled,712020:5d88b347-667a-4c3c-86e5-426a1b674dbe,Youssef Khaled,712020:5d88b347-667a-4c3c-86e5-426a1b674dbe,11/15/2025 11:04,11/22/2025 14:19,11/22/2025 12:31,,,0,"As a registered user, I want to edit my account information (such as name, email, and country) so that my profile remains accurate and up to date.
+
+*AC1: View Account Information*
+
+Given the user is logged into the system
+
+When the user navigates to the “Account Details” page
+
+Then the user should see their current account information pre-filled.
+
+*AC2: Edit Personal Information Successfully*
+
+Given the user is on the “Account Details” page
+
+When the user updates valid information (name, email)
+
+And clicks “Submit”
+
+Then the system should save the updated information
+
+And display a success message “Your account details have been successfully updated!”.
+
+*AC3: Invalid Email Format*
+
+Given the user is editing their account info
+
+When the user enters an email in an invalid format (e.g., without @ or domain)
+
+And clicks “Submit”
+
+Then the system should NOT update the information
+
+And display an error message “E-Mail Address does not appear to be valid!”.
+
+*AC4: Duplicate Email*
+
+Given another account already uses the same email
+
+When the user attempts to update their account email to this existing email
+
+Then the system should NOT allow the update
+
+And display “Email already exists”.
+
+*AC5: Required Fields Validation*
+
+Given the user is editing their account info
+
+When the user removes a required field (e.g., name or email)
+
+And clicks “Submit”
+
+Then the system should show a validation error “This field is required”.",,Youssef Khaled,712020:5d88b347-667a-4c3c-86e5-426a1b674dbe,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@7c5507a3,,,,,,,,,,,,,,,,,,,,,,0|i0002w:,,,,GD Sprint 1,,,,,,,,,,,,,,,,,,,10036,GD-3,Manual Testing - QA Cart,To Do,11/15/2025 11:04
+Admin Reporting,GD-35,10098,Story,To Do,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,,,,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,11/15/2025 1:48,11/22/2025 12:35,11/22/2025 12:33,,,0,"*Acceptance Criteria:*
+
+* Admin can access *Reports → Statistics* to see Out of Stock Products.
+* Out of Stock Products value matches the number of products in the catalog with quantity = 0.
+* Admin can access *Reports → Who’s Online* to see active visitors.
+* Who’s Online report lists visitors with IP, Customer Name (if logged in), Page URL, and Date Added.
+* Reports load correctly without errors and update after changes in products or visitor activity.",,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,,,,,,,,,,,,,,,,,,,,,,,,,GD-55,GD-59,,,,,,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@431625bd,,,,,,,,,,,,,,,,,,,,,,0|i0008v:,,,,GD Sprint 1,,,,,,,,,,,,,,,,,,,,,,To Do,11/15/2025 1:48
+Admin Product Catalog Management,GD-7,10045,Story,Done,GD,G4-DEPI,software,Hadeer Mahmoud,70121:2ee54750-43d5-4f63-bb43-522f5f7cf026,,Medium,Done,,,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,11/14/2025 23:18,11/22/2025 14:16,11/22/2025 13:34,11/22/2025 12:30,,0,"As a Store Admin,  I want to manage products (add, edit, delete, and assign categories) So that I can control the product catalog displayed to customers on the storefront.
+
+*Acceptance Criteria*
+
+* Admin can *add, edit, delete, and assign categories* to products from the Admin Panel.
+* New products must appear correctly in the *Admin list* and on the *storefront*.
+* Edited product details (e.g., price) must be updated in both Admin and storefront views.
+* Deleted products must disappear from storefront and be fully removed from the *database*.
+* Products assigned to categories must appear correctly under those categories.
+* All product operations must be accurately reflected in the database tables:
+** {{oc_product}} for add/edit/delete
+** {{oc_product_to_category}} for category assignment
+* Feature is complete when all manual + database test cases pass with no critical issues",,Nervana Issac,712020:97281c6d-8670-4428-b85d-bc1d5cb4ccba,,,,,,,,,,,,,,,,,,,,,,,,,GD-8,GD-11,GD-12,GD-16,GD-18,GD-20,GD-21,GD-23,GD-31,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@42f3297b,,,,,,,,,,,,,,,,,,,,,,0|i00025:,,,,GD Sprint 1,,,,,,,,,,,,,,,,,,10070_*:*_1_*:*_70688_*|*_10068_*:*_1_*:*_3682416_*|*_10069_*:*_1_*:*_0,10036,GD-3,Manual Testing - QA Cart,Done,11/22/2025 12:30
